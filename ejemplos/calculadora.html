@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        .calc-form__inputcontainer{
+            margin: 1em 0em;
+        }
+
+        .container{
+            margin: 1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form class="calc-form">
+
+            <div class="calc-form__inputcontainer">
+                <label for="number1">Numero 1:</label>
+                <input type="text" id="number1" value="0" required autofocus>
+            </div>
+
+            <div class="calc-form__inputcontainer">
+                <label for="number2">Numero 2:</label>
+                <input type="text" id="number2" value="0" required>
+            </div>
+
+            <input type="button" id="btn-suma" class="btn" value="Sumar"> 
+            <input type="button" id="btn-resta" class="btn" value="restar">
+            <input type="button" id="btn-multiplicacion" class="btn" value="multiplicar">
+            <input type="button" id="btn-division" class="btn" value="dividir">
+        </form>
+    </div>
+
+    <div class="container" id="result">
+
+    </div>
+
+    <script>
+
+        let btnSuma = document.getElementById('btn-suma');
+        let btnResta = document.getElementById('btn-resta');
+        let btnMultiplicacion = document.getElementById('btn-multiplicacion');
+        let btnDivision = document.getElementById('btn-division');
+        let resultContainer = document.getElementById('result');
+        
+        function clearForm(){
+            document.getElementById('number1').value = "0";
+            document.getElementById('number2').value = "0";
+        }
+
+        btnSuma.addEventListener('click',()=>{
+
+            let number1 = document.getElementById('number1').value.trim();
+            let number2 = document.getElementById('number2').value.trim();
+            let result = 0;
+
+            if( !isNaN(number1) && !isNaN(number2) && number1 !== "" && number2 !== "" ){                
+                number1 = parseInt(number1);
+                number2 = parseInt(number2);
+                result = number1 + number2;
+            }
+
+            resultContainer.innerHTML = result;
+            clearForm();
+        });
+
+
+    </script>
+
+</body>
+</html>

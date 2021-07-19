@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    
+    <button type="button" onclick = "saludar()" >Click Aqui!</button>
+
+    <br><br><br>
+
+    <button type="button" id="myButton" >Button</button>
+    
+    <br><br><br>
+
+    <ul id="list">
+        <li><a href="https://www.youtube.com/?hl=es-419&gl=PE">link 1</a></li>
+        <li><a href="#">link 2</a></li>
+        <li><a href="#">link 3</a></li>
+        <li><a href="#">link 4</a></li>
+        <li><a href="#">link 5</a></li>
+    </ul>
+
+    <script>
+
+        function saludar(){
+            alert( "Hola putos! >:v" );
+        }
+
+        //addEventListener
+        let btn = document.getElementById("myButton");
+        btn.addEventListener('click', (event)=>{
+            console.log( event );
+            console.log( "holaaaa" );
+        } );
+
+        /*let links = document.querySelectorAll("a");
+
+        links.forEach(( link )=>{
+            link.addEventListener('click',( event )=>{
+                console.log("click en enlaces");
+            });
+        });*/
+
+        let ul = document.getElementById("list");
+        ul.addEventListener( "click", (event)=>{
+
+            event.preventDefault();
+
+            let element = event.target;
+            //console.log( element.querySelector('a') );
+            console.log( element.localName );
+            if(element.localName === 'a'){
+                console.dir(element);
+                console.log("click en un enlace");
+            }
+            //console.log("click en el ul");
+        } );
+        
+
+
+    </script>
+
+</body>
+</html>

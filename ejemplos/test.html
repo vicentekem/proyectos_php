@@ -1,0 +1,9 @@
+<script>
+
+fetch("products.php")
+.then(result => result.text())
+.then( text => {
+    console.log(JSON.parse( text ));
+});
+
+</script>
