@@ -1,0 +1,35 @@
+[
+    {
+        "id" : 1,
+        "nombres": "Joel",
+        "apellido_paterno": "Vicente",
+        "apellido_materno": "Quispe",
+        "cargo" : "programador jr",
+        "salario":2800
+    },
+    {
+        "id" : 2,
+        "nombres": "Juan",        
+        "apellido_paterno": "Perez",
+        "apellido_materno": "Perez",
+        "cargo" : "programador jr",
+        "salario":3000
+    },
+    {
+        "id" : 3,
+        "nombres": "Erick",
+        "apellido_paterno": "Ramos",
+        "apellido_materno": "Gutierrez",
+        "cargo" : "programador sr",
+        "salario":4500
+    },
+    {
+        "id" : 4,
+        "nombres": "Jesus",        
+        "apellido_paterno": "Herrera",
+        "apellido_materno": "Espiritu",
+        "cargo" : "soporte tecnico",
+        "salario":2000
+    }
+
+]
