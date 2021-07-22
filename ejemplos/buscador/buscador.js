@@ -6,6 +6,7 @@ let list = [
     'Pes2022',
 ];
 // render
+//ella no te ama
 function renderList(list,container){
     container.innerHTML = "";
     list.forEach( element => {
