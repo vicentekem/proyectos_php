@@ -5,7 +5,7 @@ let list = [
     'Resident Evil 3',
     'Pes2022',
 ];
-
+// render
 function renderList(list,container){
     container.innerHTML = "";
     list.forEach( element => {
