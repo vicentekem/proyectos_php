@@ -42,6 +42,7 @@
             <input type="button" id="btn_add" class="btn btn-primary" value="Agregar">
         </div>
     </form>
+
     <div class="row mx-0">
         <div class="row col-11 mx-auto mt-2">
             <table class="table">
@@ -62,6 +63,52 @@
     </div>
     
     
+    <div class="modal fade" id="modal_personal" aria-hidden="true" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+
+          <div class="modal-content">
+
+            <div class="modal-header">
+              <h5 class="modal-title" id="modal_personal_title">Editar Personal</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            
+            <div class="modal-body">
+                
+                <form action="" class="row mx-0 px-0">
+                    <div class="form-group mb-2">
+                        <input type="text" id="txt_edit_dni" class="form-control" placeholder="Ingrese Nro DNI" disabled>
+                    </div>
+                    <div class="form-group mb-2">
+                        <input type="text" id="txt_edit_nombres" class="form-control" placeholder="Ingrese nombres">
+                    </div>
+                    <div class="form-group mb-2">
+                        <input type="text" id="txt_edit_apellidos" class="form-control" placeholder="Ingrese Apellidos">
+                    </div>
+                    <div class="form-group mb-2">
+                        <select class="form-control" name="" id="cbx_edit_cargo">
+                            <option value="0">--Selecine Cargo--</option>
+                            <option value="practicante">Practicante</option>
+                            <option value="programador jr">Programador jr</option>
+                            <option value="Jefe de oficina">Jefe de oficina</option>
+                        </select>
+                    </div>                    
+                    <div class="form-group mb-2">
+                        <input type="text" id="txt_edit_salario" class="form-control" placeholder="Ingrese Salario">
+                    </div>                    
+                </form>
+            </div>
+
+            <div class="modal-footer">
+                <input type="button" id="btn_edit" class="btn btn-success" value="Guardar">
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+
+
 
     <script src="../plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="index.js"></script>
